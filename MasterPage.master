@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ÇAYPER-ÇAYKUR PERSONEL BİLGİ İŞLEM SİSTEMİ</title>
+ <style type="text/css">
+  body {  margin:0px; padding:0px; }
+  #menum ul {
+     
+    list-style:none;
+	margin:0px; padding:0px; }
+  #menum li {
+     
+    float:left; position:relative; width:150px; }
+  #menum li ul {
+    display:none; left:0; position:absolute; top:21px; }
+  #menum ul li a{
+
+    background:#ffffff;
+    border-color:#CCCCCC #888888 #555555 #BBBBBB;
+    border-style:none;
+    color:#000000;
+    display:block;
+    font:bold 15px Times New Roman, Helvetica, Sans-serif;
+    margin:0px;
+    padding:2px 3px;
+   text-decoration:none;
+    line-height:27px; }
+  #menum ul li a:hover {
+
+     
+    background-color:#FFF; color:#FF0000; }
+  #menum li:hover ul { display:block;  text-align: center;}
+ </style>       
+    <asp:ContentPlaceHolder id="head" runat="server">
+  
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+     <asp:Image ID="Image1" runat="server" ImageUrl="~/Icon/CaykurLogo.png"/>
+    
+       <div 
+           id="menum">
+<ul>
+             
+<li><a href="login.aspx">ANA SAYFA</a></li>
+<li><a href="hakkimizda.aspx">HAKKIMIZDA</a></li>
+<li><a href="#">DEPARTMAN</a>
+  <ul>
+    <li><a href="yonetim.aspx">YÖNETİM</a></li>
+	<li><a href="bilgiislem.aspx">BİLGİ İŞLEM</a></li>
+	<li><a href="muhasebe.aspx">MUHASEBE VE MALİ İŞLER</a></li>
+	<li><a href="enerjiisleri.aspx">ENERJİ İŞLERİ</a></li>
+    <li><a href="pazarlama.aspx">PAZARLAMA</a></li>
+    <li><a href="hukuk.aspx">HUKUK MÜŞAVİRLİĞİ</a></li>
+  </ul> 
+    </li> 
+<li><a href="#">HİZMETLER</a>
+    <ul>
+        <li><a href="kimlik.aspx">KİMLİK NÜFUS BİLGİLERİ</a></li>
+    </ul>
+    </li>
+<li><a href="iletisim.aspx">İLETİŞİM</a></li>
+</ul>
+</div>
+    <form id="form1" runat="server">
+    <div>
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+    
+    <%--<script src="Js/jquery-1.11.3.min.js"></script>
+        <script src="Js/bootstrap.js"></script>--%>
+</body>
+
+    
+</html>
